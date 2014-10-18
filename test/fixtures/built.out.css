@@ -1,0 +1,14 @@
+body {
+  color: #000;
+}
+
+.sidebar {
+  color: #fff;
+  background-color: #000;
+}
+
+/** Shared CSS */
+
+body {
+  font-size: 14px;
+}
