@@ -4,7 +4,7 @@
   "description": "Compiles CSS into a single CSS file using rework. Supports @import statements.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/broccoli build dist && ./node_modules/.bin/mocha test/test.js"
+    "test": "./node_modules/.bin/broccoli build test/tmp && ./node_modules/.bin/mocha test/test.js"
   },
   "author": "michelle",
   "license": "MIT",
