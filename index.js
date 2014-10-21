@@ -13,7 +13,7 @@ function ReworkCompiler(inputTree, inputFile, outputFile, opts) {
     return new ReworkCompiler(inputTree, inputFile, outputFile, opts)
   }
 
-  CachingWriter.apply(this, [inputTrees, opts])
+  CachingWriter.apply(this, [inputTree, opts])
 
   this.inputFile = inputFile
   this.outputFile = outputFile
