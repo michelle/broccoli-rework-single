@@ -1,6 +1,5 @@
 'use strict';
 
-var includePathSearcher = require('include-path-searcher')
 var assign = require('object-assign');
 var path = require('path');
 var fs = require('fs');
@@ -9,7 +8,7 @@ var mkdirp = require('mkdirp');
 var CachingWriter = require('broccoli-caching-writer')
 var Rework = require('rework');
 
-function ReworkCompiler(inputTrees, inputFile, outputFile, opts) {
+function ReworkCompiler(inputTree, inputFile, outputFile, opts) {
   if (!(this instanceof ReworkCompiler)) {
     return new ReworkCompiler(inputTrees, inputFile, outputFile, opts)
   }
@@ -18,6 +17,7 @@ function ReworkCompiler(inputTrees, inputFile, outputFile, opts) {
 
   this.inputFile = inputFile
   this.outputFile = outputFile
+  this.sourceDir = inputTree
   this.opts = opts || {}
 }
 
@@ -26,14 +26,11 @@ ReworkCompiler.prototype.constructor = ReworkCompiler
 
 ReworkCompiler.prototype.updateCache = function(srcPaths, destDir) {
   var destFile = destDir + '/' + this.outputFile
-
   mkdirp.sync(path.dirname(destFile));
-
-  var filename = includePathSearcher.findFileSync(this.inputFile, srcPaths);
   var data = fs.readFileSync(filename, 'utf8');
 
   var rework = new Rework(data, {
-    source: filename
+    source: this.sourceDir
   });
 
   if (this.opts.use) {
