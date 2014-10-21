@@ -10,7 +10,7 @@ var Rework = require('rework');
 
 function ReworkCompiler(inputTree, inputFile, outputFile, opts) {
   if (!(this instanceof ReworkCompiler)) {
-    return new ReworkCompiler(inputTrees, inputFile, outputFile, opts)
+    return new ReworkCompiler(inputTree, inputFile, outputFile, opts)
   }
 
   CachingWriter.apply(this, [inputTrees, opts])
