@@ -5,7 +5,7 @@ Inspired heavily by [broccoli-less-single](https://github.com/gabrielgrant/brocc
 ## Installation & usage
 
 ```
-npm install --save-dev broccoli-less-single
+npm install --save-dev broccoli-rework-single
 ```
 
 ```js
