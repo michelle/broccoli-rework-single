@@ -1,13 +1,18 @@
 {
   "name": "broccoli-rework-single",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "keywords": ["rework", "broccoli", "css", "single", "import", "ember-cli"],
   "description": "Compiles CSS into a single CSS file using rework. Supports @import statements.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/broccoli build test/tmp && ./node_modules/.bin/mocha test/test.js"
   },
   "author": "michelle",
-  "license": "MIT",
+  "license": "Public Domain",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michelle/broccoli-rework-single.git"
+  },
   "dependencies": {
     "rework": "~1.0.1",
     "broccoli-caching-writer": "~0.5.2",
