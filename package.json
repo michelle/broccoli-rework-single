@@ -1,6 +1,6 @@
 {
   "name": "broccoli-rework-single",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compiles CSS into a single CSS file using rework. Supports @import statements.",
   "main": "index.js",
   "scripts": {
