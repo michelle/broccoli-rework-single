@@ -1,6 +1,6 @@
 {
   "name": "broccoli-rework-single",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": ["rework", "broccoli", "css", "single", "import", "ember-cli"],
   "description": "Compiles CSS into a single CSS file using rework. Supports @import statements.",
   "main": "index.js",
