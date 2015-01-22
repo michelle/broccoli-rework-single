@@ -9,15 +9,15 @@ var mkdirp = require('mkdirp');
 var CachingWriter = require('broccoli-caching-writer');
 var Rework = require('rework');
 
-function ReworkCompiler(inputTrees, inputFile, outputFile, opts) {
+function ReworkCompiler(inputTrees,opts) {
   if (!(this instanceof ReworkCompiler)) {
-    return new ReworkCompiler(inputTrees, inputFile, outputFile, opts);
+    return new ReworkCompiler(inputTrees,opts);
   }
 
   CachingWriter.apply(this, [inputTrees, opts]);
 
-  this.inputFile = inputFile;
-  this.outputFile = outputFile;
+  this.inputFile = opts.inputFile;
+  this.outputFile = opts.outputFile;
   this.opts = opts || {};
 }
 
